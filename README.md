@@ -4,3 +4,9 @@
 - Prepare your Work Environment, things to consider:
 - Cloud Service Provider: AWS or GCP
 - Install the following tools on your local: terraform, git, ansible, docker
+
+
+# Submission
+- Defi projects research:  
+- Blockchain networks research:  
+- Work environment preparation: 
