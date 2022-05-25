@@ -16,14 +16,14 @@ jobs:
           ref: ${{ github.head_ref }}
       - name: Create PDFs from markdown files - blockchain networks research
         uses: boardfish/waxseal@v1.0.2
-        id: waxseal
+        id: blockchain_networks_research
         with:
           input_directory: 'week1/blockchain-networks-research'
           output_directory: 'week1/blockchain-networks-research'
           template_file: 'pdf_template.tex'
       - name: Create PDFs from markdown files - DeFi projects research
         uses: boardfish/waxseal@v1.0.2
-        id: waxseal
+        id: defi_projects_research
         with:
           input_directory: 'week1/defi-projects-research'
           output_directory: 'week1/defi-projects-research'
