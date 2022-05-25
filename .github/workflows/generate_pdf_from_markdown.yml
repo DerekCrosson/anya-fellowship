@@ -1,0 +1,30 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+on: [push]
+
+jobs:
+  waxseal_job:
+    runs-on: ubuntu-latest
+    name: Waxseal
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          # Make sure the actual branch is checked out when running on pull requests
+          ref: ${{ github.head_ref }}
+      - name: Create PDFs from markdown files - blockchain networks research
+        uses: boardfish/waxseal@v1.0.2
+        id: waxseal
+        with:
+          input_directory: 'week1/blockchain-networks-research'
+          output_directory: 'week1/blockchain-networks-research'
+          template_file: 'pdf_template.tex'
+      - name: Create PDFs from markdown files - DeFi projects research
+        uses: boardfish/waxseal@v1.0.2
+        id: waxseal
+        with:
+          input_directory: 'week1/defi-projects-research'
+          output_directory: 'week1/defi-projects-research'
+          template_file: 'pdf_template.tex'
